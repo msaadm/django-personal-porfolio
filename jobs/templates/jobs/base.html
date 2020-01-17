@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Saad Mateen's Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'jobs/css/bootstrap.min.css' %}">
+</head>
+
+<body>
+
+<main role="main">
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p class="text-center">All rights reserved. Copyright &copy; {{ year }}.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{% static 'jobs/js/jquery-3.3.1.slim.min.js' %}"></script>
+<script src="{% static 'jobs/js/popper.min.js' %}"></script>
+<script src="{% static 'jobs/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
