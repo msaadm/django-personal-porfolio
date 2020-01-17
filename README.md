@@ -1,2 +1,3 @@
-# django-personal-porfolio
-LinkedIn Learning Course: "Building a Personal Portfolio with Django" Project
+# Django - Personal Porfolio
+LinkedIn Learning Project  
+Course: **Building a Personal Portfolio with Django**
