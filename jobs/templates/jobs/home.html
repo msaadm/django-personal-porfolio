@@ -1,12 +1,38 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Home</h1>
-</body>
-</html>
+{% extends 'jobs/base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">About Me</h1>
+            <p class="lead text-muted">Hi my name is Saad Mateen, I am professional PHP & Python Developer. Currently I
+                am also learning about data science & machine learning to grow my career.</p>
+            <p>
+                <a href="mailto:saad.5690@gmail.com" class="btn btn-primary my-2">Contact me</a>
+            </p>
+            <p>
+                <img src="{% static 'jobs/saad.jpg' %}" alt="" style="height:300px;">
+            </p>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                {% for job in jobs %}
+                    <div class="col-md-4">
+                        <a href="{% url 'job_show' job.id %}">
+                            <div class="card mb-4 box-shadow">
+                                <div style="height: 300px; width: 100%; background-image: url('{{ job.image.url }}')"></div>
+                                <div class="card-body">
+                                    <p class="card-text">{{ job.summary }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
